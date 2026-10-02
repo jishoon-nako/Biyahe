@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="tl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/jishoon-nako/Biyahe/main/biyahe.css">
+
+    <title>Biyahe Araw-Araw</title>
+    
+    <style>
+
+        /* ==============================
+           COLOR PALETTE
+           ==============================
+           
+           Vanilla Cream  #FFF8E2
+           Buttercream    #FFEFB9
+           Powder Blue    #BCD1DE
+           Walnut Brown   #5E442E
+        */
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #FFF8E2;
+            color: #5E442E;
+        }
+
+
+        /* ==============================
+           NAVIGATION
+           ============================== */
+
+        nav {
+            height: 75px;
+            background: #FFF8E2;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+
+            border-bottom: 1px solid #5E442E;
+        }
+
+
+        .logo {
+            font-family: Georgia, serif;
+            font-size: 22px;
+            font-weight: bold;
+            color: #5E442E;
+            letter-spacing: 1px;
+        }
+
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+
+        .nav-links a {
+            text-decoration: none;
+            color: #5E442E;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+
+        .nav-links a:hover {
+            color: #BCD1DE;
+        }
+
+
+        /* ==============================
+           HERO
+           PHOTO 1
+           ============================== */
+
+        .hero {
+            height: 650px;
+
+            position: relative;
+
+            background:
+                linear-gradient(
+                    rgba(94, 68, 46, 0.35),
+                    rgba(94, 68, 46, 0.35)
+                ),
+                url("photo1.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+        }
+
+
+        .hero-content {
+            background: rgba(255, 248, 226, 0.92);
+
+            padding: 45px 70px;
+
+            max-width: 800px;
+        }
+
+
+        .hero h1 {
+            font-family: Georgia, serif;
+            font-size: 65px;
+            color: #5E442E;
+            letter-spacing: 3px;
+            line-height: 1;
+            margin-bottom: 20px;
+        }
+
+
+        .hero p {
+            font-size: 18px;
+            color: #5E442E;
+        }
+
+
+        .button {
+            display: inline-block;
+
+            margin-top: 25px;
+
+            padding: 13px 28px;
+
+            background: #5E442E;
+            color: #FFF8E2;
+
+            text-decoration: none;
+
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+
+        /* ==============================
+           INTRODUCTION
+           ============================== */
+
+        .intro {
+            padding: 100px 15%;
+            text-align: center;
+            background: #FFF8E2;
+        }
+
+
+        .small-title {
+            font-size: 13px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            color: #5E442E;
+        }
+
+
+        .intro h2 {
+            font-family: Georgia, serif;
+            font-size: 45px;
+            margin-bottom: 25px;
+        }
+
+
+        .intro p {
+            max-width: 750px;
+            margin: auto;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* ==============================
+           PHOTO 2 — JEEPNEY
+           ============================== */
+
+        .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 500px;
+        }
+
+        .slider-wrapper {
+            position: relative;
+            min-width: 0;
+        }
+
+        .slider {
+            display: flex;
+            aspect-ratio: 16 / 10;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+        }
+
+        .slider::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, and Opera */
+        }
+
+        .slider2::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, and Opera */
+        }
+
+        .slider img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            flex: 0 0 100%;
+            scroll-snap-align: start;
+        }
+
+
+        .feature-text {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            padding: 70px;
+
+            background: #BCD1DE;
+        }
+
+
+        .feature-text h2 {
+            font-family: Georgia, serif;
+            font-size: 45px;
+            margin-bottom: 20px;
+        }
+
+
+        .feature-text p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+
+        /* ==============================
+           PHOTOS 3 & 4
+           BUS + MRT/LRT
+           ============================== */
+
+        .transport-section {
+            padding: 90px 8%;
+            background: #FFEFB9;
+        }
+
+
+        .section-heading {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+
+        .section-heading h2 {
+            font-family: Georgia, serif;
+            font-size: 42px;
+        }
+
+
+        .transport-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            max-width: 1000px;
+            margin: auto;
+        }
+
+
+        .transport-card {
+            background: #FFF8E2;
+        }
+
+
+        .transport-card img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
+
+
+        .transport-card-content {
+            padding: 25px;
+        }
+
+
+        .transport-card h3 {
+            font-family: Georgia, serif;
+            font-size: 27px;
+            margin-bottom: 8px;
+        }
+
+
+        .transport-card p {
+            line-height: 1.6;
+        }
+
+
+        /* ==============================
+           TRANSITION
+           ============================== */
+
+        .transition {
+            background: #5E442E;
+            color: #FFF8E2;
+
+            padding: 100px 15%;
+
+            text-align: center;
+        }
+
+
+        .transition h2 {
+            font-family: Georgia, serif;
+            font-size: 50px;
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+
+        .transition p {
+            color: #FFEFB9;
+            font-size: 17px;
+        }
+
+
+        /* ==============================
+           CHALLENGES
+           PHOTOS 5-8
+           ============================== */
+
+        .challenges {
+            padding: 90px 8%;
+            background: #FFF8E2;
+        }
+
+
+        .challenge-grid {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            gap: 25px;
+
+            max-width: 1100px;
+
+            margin: auto;
+        }
+
+
+        .challenge-card {
+            background: #FFEFB9;
+        }
+
+
+        .challenge-card img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+        }
+
+
+        .challenge-content {
+            padding: 25px;
+        }
+
+
+        .challenge-content h3 {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            margin-bottom: 8px;
+        }
+
+
+        .challenge-content p {
+            line-height: 1.6;
+        }
+
+
+        /* ==============================
+           FULL WIDTH PHOTO 9
+           ============================== */
+
+        .banner {
+            height: 550px;
+
+            background:
+                linear-gradient(
+                    rgba(94, 68, 46, 0.25),
+                    rgba(94, 68, 46, 0.25)
+                ),
+                url("photo9.jpg");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+        }
+
+
+        .banner-box {
+            background: #FFF8E2;
+
+            padding: 40px 70px;
+
+            max-width: 700px;
+        }
+
+
+        .banner-box h2 {
+            font-family: Georgia, serif;
+            font-size: 45px;
+            margin-bottom: 15px;
+        }
+
+
+        /* ==============================
+           PHOTO 10 + IMPACT
+           ============================== */
+
+        .impact {
+            display: grid;
+
+            grid-template-columns: 1fr 1fr;
+
+            min-height: 600px;
+        }
+
+
+        .impact-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+
+        .impact-text {
+            background: #BCD1DE;
+
+            padding: 70px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+
+        .impact-text h2 {
+            font-family: Georgia, serif;
+            font-size: 45px;
+            margin-bottom: 25px;
+        }
+
+
+        .impact-item {
+            margin-bottom: 18px;
+            padding-bottom: 15px;
+
+            border-bottom: 1px solid #5E442E;
+        }
+
+
+        .impact-item h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+
+        .impact-item p {
+            line-height: 1.5;
+        }
+
+
+        /* ==============================
+           SOLUTIONS
+           ============================== */
+
+        .solutions {
+            background: #FFEFB9;
+            padding: 90px 15%;
+        }
+
+
+        .solutions h2 {
+            text-align: center;
+            font-family: Georgia, serif;
+            font-size: 45px;
+            margin-bottom: 45px;
+        }
+
+
+        .solution {
+            background: #FFF8E2;
+
+            padding: 25px 30px;
+
+            margin-bottom: 15px;
+
+            border-left: 6px solid #5E442E;
+        }
+
+
+        .solution-number {
+            font-size: 13px;
+            letter-spacing: 2px;
+            color: #5E442E;
+            margin-bottom: 5px;
+        }
+
+
+        .solution h3 {
+            font-family: Georgia, serif;
+            font-size: 23px;
+            margin-bottom: 7px;
+        }
+
+
+        /* ==============================
+           CALL TO ACTION
+           ============================== */
+
+        .cta {
+            background: #5E442E;
+            color: #FFF8E2;
+
+            text-align: center;
+
+            padding: 100px 20px;
+        }
+
+
+        .cta h2 {
+            font-family: Georgia, serif;
+            font-size: 52px;
+            margin-bottom: 20px;
+        }
+
+
+        .cta p {
+            color: #FFEFB9;
+            font-size: 17px;
+        }
+
+
+        /* ==============================
+           FOOTER
+           ============================== */
+
+        footer {
+            background: #FFF8E2;
+
+            padding: 35px;
+
+            text-align: center;
+
+            border-top: 1px solid #5E442E;
+        }
+
+
+        footer h3 {
+            font-family: Georgia, serif;
+            margin-bottom: 8px;
+        }
+
+
+        footer p {
+            font-size: 13px;
+        }
+
+
+        /* ==============================
+           MOBILE
+           ============================== */
+
+        @media (max-width: 750px) {
+
+            nav {
+                height: auto;
+                flex-direction: column;
+                gap: 15px;
+                padding: 20px;
+            }
+
+
+            .nav-links {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+
+            .hero {
+                height: 550px;
+            }
+
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+
+            .hero-content {
+                padding: 35px 25px;
+            }
+
+
+            .feature,
+            .impact {
+                grid-template-columns: 1fr;
+            }
+
+
+            .feature-text,
+            .impact-text {
+                padding: 50px 30px;
+            }
+
+
+            .transport-grid,
+            .challenge-grid {
+                grid-template-columns: 1fr;
+            }
+
+
+            .intro,
+            .solutions {
+                padding-left: 8%;
+                padding-right: 8%;
+            }
+
+
+            .transition h2,
+            .cta h2 {
+                font-size: 38px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- ==========================================
+     NAVIGATION
+     ========================================== -->
+
+<nav>
+
+    <div class="logo">
+        BIYAHE ARAW-ARAW
+    </div>
+
+    <div class="nav-links">
+
+        <a href="#home">HOME</a>
+
+        <a href="#transport">TRANSPORTASYON</a>
+
+        <a href="#challenges">MGA HAMON</a>
+
+        <a href="#impact">EPEKTO</a>
+
+        <a href="#solutions">SOLUSYON</a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- ==========================================
+     HERO
+     PHOTO 1
+     ========================================== -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <h1>
+            BIYAHE<br>
+            ARAW-ARAW
+        </h1>
+
+        <p>
+            Ang Karanasan ng Pagko-commute sa Pilipinas
+        </p>
+
+        <a class="button" href="#transport">
+            SIMULAN ANG BIYAHE
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     INTRODUCTION
+     ========================================== -->
+
+<section class="intro">
+
+    <div class="small-title">
+        ISANG ARAW SA BIYAHE
+    </div>
+
+    <h2>
+        Ang Biyahe ng Pilipino
+    </h2>
+
+    <p>
+
+        Para sa maraming Pilipino, ang pagko-commute ay bahagi na
+        ng pang-araw-araw na buhay. Araw-araw, maraming estudyante,
+        empleyado, at iba pang mamamayan ang gumagamit ng
+        pampublikong transportasyon upang makarating sa kanilang
+        destinasyon.
+
+        <br><br>
+
+        Ngunit sa likod ng bawat biyahe ay may iba't ibang hamon,
+        tulad ng trapiko, siksikan, mahabang pila, at mahabang
+        oras ng paglalakbay.
+
+    </p>
+
+</section>
+
+<!-- ==========================================
+     FEATURE
+     PHOTO 2 — JEEPNEY
+     ========================================== -->
+
+<section class="container" id="transport">
+    <div class="slider-wrapper">
+        <div class="slider">
+
+            <img id="slide-1" src="https://raw.githubusercontent.com/jishoon-nako/Biyahe/main/photo2.jpg" alt="Jeepney"/>
+            <img id="slide-2" src="https://raw.githubusercontent.com/jishoon-nako/Biyahe/main/photo-11.jpg" alt="Jeepney2"/>
+            <img id="slide-3" src="https://raw.githubusercontent.com/jishoon-nako/Biyahe/main/photo-12.jpg" alt="Jeepney3"/>
+
+        </div>
+            <div class="slider-nav">
+            
+                <a href="#slide-1"></a>
+                <a href="#slide-2"></a>
+                <a href="#slide-3"></a>
+
+        </div>
+    </div>
+    <div class="feature-text">
+
+        <div class="small-title">
+            01 — TRANSPORTASYON
+        </div>
+
+        <h2>
+            Jeepney
+        </h2>
+
+        <p>
+
+            Isa sa mga pinakakilalang pampublikong sasakyan
+            sa Pilipinas. Para sa maraming commuters, bahagi
+            na ito ng kanilang pang-araw-araw na paglalakbay.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     PHOTOS 3 & 4
+     BUS + MRT/LRT
+     ========================================== -->
+
+<section class="transport-section">
+
+    <div class="section-heading">
+
+        <div class="small-title">
+            MGA PARAAN NG PAGBIYAHE
+        </div>
+
+        <h2>
+            Iba't Ibang Sakay
+        </h2>
+
+    </div>
+
+
+    <div class="transport-grid">
+
+
+        <!-- PHOTO 3 -->
+
+        <div class="transport-card">
+
+            <img src="https://raw.githubusercontent.com/jishoon-nako/Biyahe/main/photo3.1.jpg" alt="Bus">
+
+            <div class="transport-card-content">
+
+                <h3>
+                    Bus
+                </h3>
+
+                <p>
+
+                    Karaniwang ginagamit para sa mas mahahabang
+                    biyahe sa loob at labas ng lungsod.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PHOTO 4 -->
+
+        <div class="card">
+
+            <img src="photo4.jpg" alt="MRT LRT">
+
+            <div class="transport-card-content">
+
+                <h3>
+                    MRT / LRT
+                </h3>
+
+                <p>
+
+                    Isang mahalagang paraan ng transportasyon
+                    para sa maraming commuters, lalo na sa
+                    Metro Manila.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     TRANSITION
+     ========================================== -->
+
+<section class="transition">
+
+    <h2>
+        PERO HINDI LAGING<br>
+        MADALI ANG BIYAHE.
+    </h2>
+
+    <p>
+
+        Sa likod ng bawat biyahe ay may mga hamong
+        araw-araw na hinaharap ng mga commuters.
+
+    </p>
+
+</section>
+
+
+
+<!-- ==========================================
+     CHALLENGES
+     PHOTOS 5–8
+     ========================================== -->
+
+<section class="challenges" id="challenges">
+
+    <div class="section-heading">
+
+        <div class="small-title">
+            MGA HAMON
+        </div>
+
+        <h2>
+            Mga Hamon sa Pagko-commute
+        </h2>
+
+    </div>
+
+
+    <div class="challenge-grid">
+
+
+        <!-- PHOTO 5 -->
+
+        <div class="challenge-card">
+
+            <img src="photo5.jpg" alt="Traffic">
+
+            <div class="challenge-content">
+
+                <h3>
+                    Matinding Trapiko
+                </h3>
+
+                <p>
+
+                    Ang mabigat na trapiko ay maaaring magdagdag
+                    ng oras sa biyahe at maging sanhi ng pagkaantala.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PHOTO 6 -->
+
+        <div class="challenge-card">
+
+            <img src="photo6.jpg" alt="Crowded commuters">
+
+            <div class="challenge-content">
+
+                <h3>
+                    Siksikan
+                </h3>
+
+                <p>
+
+                    Sa rush hour, maraming commuters ang nagsisiksikan
+                    upang makasakay sa pampublikong transportasyon.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PHOTO 7 -->
+
+        <div class="challenge-card">
+
+            <img src="https://raw.githubusercontent.com/jishoon-nako/Biyahe/main/photo3.jpg" alt="Long line">
+
+            <div class="challenge-content">
+
+                <h3>
+                    Mahabang Pila
+                </h3>
+
+                <p>
+
+                    Ang dami ng commuters ay maaaring magresulta
+                    sa mahabang pila sa mga terminal at istasyon.
+
+                </p>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PHOTO 8 -->
+
+        <div class="challenge-card">
+
+            <img src="photo8.jpg" alt="Long commute">
+
+            <div class="challenge-content">
+
+                <h3>
+                    Mahabang Biyahe
+                </h3>
+
+                <p>
+
+                    Maraming commuters ang gumugugol ng mahabang
+                    oras sa paglalakbay papunta at pauwi.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     FULL WIDTH BANNER
+     PHOTO 9
+     ========================================== -->
+
+<section class="banner">
+
+    <div class="banner-box">
+
+        <div class="small-title">
+            ANG REALIDAD NG BIYAHE
+        </div>
+
+        <h2>
+            Higit pa sa simpleng pagpunta sa isang lugar.
+        </h2>
+
+        <p>
+
+            Para sa marami, ang bawat biyahe ay bahagi ng
+            kanilang pang-araw-araw na buhay.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     IMPACT
+     PHOTO 10
+     ========================================== -->
+
+<section class="impact" id="impact">
+   <div class="impact-image">
+
+        <img src="https://raw.githubusercontent.com/jishoon-nako/Biyahe/main/photo-99.jpg" alt="Filipino commuters">
+
+    </div>
+
+    <div class="impact-text">
+
+        <div class="small-title">
+            EPEKTO
+        </div>
+
+        <h2>
+            Higit Pa sa Oras sa Kalsada
+        </h2>
+
+
+        <div class="impact-item">
+
+            <h3>
+                ORAS
+            </h3>
+
+            <p>
+                Mas kaunting oras para sa pahinga,
+                pag-aaral, at pamilya.
+            </p>
+
+        </div>
+
+
+        <div class="impact-item">
+
+            <h3>
+                GASTOS
+            </h3>
+
+            <p>
+                Ang araw-araw na pamasahe ay bahagi
+                ng gastusin ng maraming Pilipino.
+            </p>
+
+        </div>
+
+
+        <div class="impact-item">
+
+            <h3>
+                PAG-AARAL
+            </h3>
+
+            <p>
+                Ang mahabang biyahe ay maaaring makaapekto
+                sa oras para sa schoolwork at pahinga.
+            </p>
+
+        </div>
+
+
+        <div class="impact-item">
+
+            <h3>
+                TRABAHO
+            </h3>
+
+            <p>
+                Ang traffic at delays ay maaaring makaapekto
+                sa oras ng pagpasok at pag-uwi.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     SOLUTIONS
+     ========================================== -->
+
+<section class="solutions" id="solutions">
+
+    <div class="small-title" style="text-align:center;">
+        TUNGO SA MAS MAAYOS NA BIYAHE
+    </div>
+
+    <h2>
+        Mga Posibleng Solusyon
+    </h2>
+
+
+    <div class="solution">
+
+        <div class="solution-number">
+            01
+        </div>
+
+        <h3>
+            Mas Maayos na Pampublikong Transportasyon
+        </h3>
+
+        <p>
+            Pagpapabuti at pagpapalawak ng mga pampublikong
+            sasakyan upang mas maraming commuters ang mapagsilbihan.
+        </p>
+
+    </div>
+
+
+    <div class="solution">
+
+        <div class="solution-number">
+            02
+        </div>
+
+        <h3>
+            Mas Maayos na Traffic Management
+        </h3>
+
+        <p>
+            Mas mahusay na pamamahala ng daloy ng trapiko
+            upang makatulong na mabawasan ang congestion
+            at pagkaantala.
+        </p>
+
+    </div>
+
+
+    <div class="solution">
+
+        <div class="solution-number">
+            03
+        </div>
+
+        <h3>
+            Mas Maayos na Transport Terminals
+        </h3>
+
+        <p>
+            Pagkakaroon ng mas ligtas, malinis, at accessible
+            na waiting areas at terminals.
+        </p>
+
+    </div>
+
+
+    <div class="solution">
+
+        <div class="solution-number">
+            04
+        </div>
+
+        <h3>
+            Mas Accessible na Transportasyon
+        </h3>
+
+        <p>
+            Pagbibigay ng mas maraming maaasahang transport
+            options para sa iba't ibang commuters.
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ==========================================
+     CALL TO ACTION / CLOSING
+     ========================================== -->
+
+<section class="cta">
+
+    <h2>
+        ANG BAWAT BIYAHE<br>
+        AY MAY KWENTO.
+    </h2>
+
+    <p>
+
+        Para sa bawat estudyante, manggagawa, at Pilipinong
+        araw-araw na bumibiyahe.
+
+    </p>
+
+</section>
+
+
+
+<!-- ==========================================
+     FOOTER
+     ========================================== -->
+
+<footer>
+
+    <h3>
+        BIYAHE ARAW-ARAW
+    </h3>
+
+    <p>
+        Isang pagtingin sa realidad ng pagko-commute sa Pilipinas.
+    </p>
+
+    <br>
+
+    <p>
+        © 2026
+    </p>
+
+</footer>
+
+
+</body>
+</html>
